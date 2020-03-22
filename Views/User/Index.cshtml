@@ -1,7 +1,22 @@
 ﻿
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+<h1>@ViewBag.title</h1>
+
+@if (ViewBag.users.Count > 0)
+{
+    <table class="table">
+        <tr>
+            <th>Name</th>
+        </tr>
+        @foreach (var user in ViewBag.users)
+        {
+            <tr>
+                <td>@user.Username</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <h1>There are no users</h1>
 }
 
-
-<h1>@ViewBag.title @ViewBag.user</h1>

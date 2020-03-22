@@ -10,17 +10,16 @@ namespace UserSignup1.Controllers
     public class UserController : Controller
     {
         public string error = null;
-        Models.User user = new User();
+        public static List<User> users = new List<User>();
         public IActionResult Index()
         {
             ViewBag.title = "Welcome ";
-            ViewBag.user = user.Username;
+            ViewBag.users = users;
             return View();
         }
 
         public IActionResult Add()
         {
-            ViewBag.error = error;
             return View();
         }
         [HttpPost]
@@ -28,18 +27,19 @@ namespace UserSignup1.Controllers
         {
             if (verify == null || user.Password == null)
             {
-                error = "Password and Verify password can't be empty.";
+                ViewBag.error = "Password and Verify password can't be empty.";
                 return View("Add");
 
             }
             else if (verify != user.Password)
             {
-                error = "Password doesn't match";
+                ViewBag.error = "Password doesn't match";
                 return View("Add");
             }
             else
             {
-                return View("Index");
+                users.Add(user);
+                return Redirect("/User");
             }
         }
 
