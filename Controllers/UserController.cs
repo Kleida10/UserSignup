@@ -4,13 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using UserSignup1.Models;
+using UserSignup1.ViewModels;
 
 namespace UserSignup1.Controllers
 {
     public class UserController : Controller
     {
-        public string error = null;
-        public static List<User> users = new List<User>();
+        public static List<AddUserViewModel> users = new List<AddUserViewModel>();
         public IActionResult Index()
         {
             ViewBag.title = "Welcome ";
@@ -20,27 +20,23 @@ namespace UserSignup1.Controllers
 
         public IActionResult Add()
         {
-            return View();
+            AddUserViewModel addUserViewModel = new AddUserViewModel(); 
+            return View(addUserViewModel);
         }
         [HttpPost]
-        public IActionResult Add(User user, string verify)
+        public IActionResult Add(AddUserViewModel addUserViewModel)
         {
-            if (verify == null || user.Password == null)
+            if (ModelState.IsValid)
             {
-                ViewBag.error = "Password and Verify password can't be empty.";
-                return View("Add");
+                
+                users.Add(addUserViewModel);
+                return Redirect("/User");
 
             }
-            else if (verify != user.Password)
-            {
-                ViewBag.error = "Password doesn't match";
-                return View("Add");
-            }
-            else
-            {
-                users.Add(user);
-                return Redirect("/User");
-            }
+
+            return View(addUserViewModel);
+            
+
         }
 
     }

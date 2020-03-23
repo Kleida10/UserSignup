@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kleida\\Source\\Repos\\UserSignup2\\UserSignup1.csproj": {}
+    "C:\\Users\\kleida\\source\\repos\\UserSignup2\\UserSignup1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kleida\\Source\\Repos\\UserSignup2\\UserSignup1.csproj": {
+    "C:\\Users\\kleida\\source\\repos\\UserSignup2\\UserSignup1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kleida\\Source\\Repos\\UserSignup2\\UserSignup1.csproj",
+        "projectUniqueName": "C:\\Users\\kleida\\source\\repos\\UserSignup2\\UserSignup1.csproj",
         "projectName": "UserSignup1",
-        "projectPath": "C:\\Users\\kleida\\Source\\Repos\\UserSignup2\\UserSignup1.csproj",
+        "projectPath": "C:\\Users\\kleida\\source\\repos\\UserSignup2\\UserSignup1.csproj",
         "packagesPath": "C:\\Users\\kleida\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kleida\\Source\\Repos\\UserSignup2\\obj\\",
+        "outputPath": "C:\\Users\\kleida\\source\\repos\\UserSignup2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kleida\\AppData\\Roaming\\NuGet\\NuGet.Config",

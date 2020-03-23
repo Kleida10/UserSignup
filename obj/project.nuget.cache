@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jkDHWXE3dakYICwcAsyD/SDUPId9iDRWpPRUo4SbSDJWmeT/Wrriz9pVf+QnFaHD6F64DqETsTkYMyE7xw8XAw==",
+  "dgSpecHash": "3Hr2r+mTFd7gfm7IAeTz1gXiNcnhYrcCmharJTCmOzBSmd8BJ7UGPaAggu6N2K1mxZxf1tXZqfF3yXaiNrgVHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kleida\\Source\\Repos\\UserSignup2\\UserSignup1.csproj",
+  "projectFilePath": "C:\\Users\\kleida\\source\\repos\\UserSignup2\\UserSignup1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kleida\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\kleida\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

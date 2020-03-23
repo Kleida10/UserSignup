@@ -1,23 +1,23 @@
-﻿
+﻿@model UserSignup1.ViewModels.AddUserViewModel
 <h1>Sign Up Page</h1>
 
-<form method="post">
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" />
-    <br />
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
-    <br />
-    <label>Verify Password</label>
-    <input type="password" name="verify" id="verify" />
-    <br />
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email" />
-    <br />
+<form asp-controller="User" asp-action="Add" method="post">
+    <label asp-for="Username"></label>
+    <input asp-for="Username" />
+    <span asp-validation-for="Username"></span>
+    <br/>
+    <label asp-for="Password"></label>
+    <input asp-for="Password" />
+    <span asp-validation-for="Password"></span>
+    <br/>
+    <label asp-for="Verify"></label>
+    <input asp-for="Verify" />
+    <span asp-validation-for="Verify"></span>
+    <br/>
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+    <br/>
     <input type="submit" value="Sign Up" />
 </form>
-@if (ViewBag.error != null)
-{
-    <p>@ViewBag.error</p>
-}
 
